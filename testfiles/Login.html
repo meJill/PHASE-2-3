@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- For icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>CCAPDEV | {{ pageTitle }}</title>
+    
+  </head>
+  <body>
+    <nav class="cyan accent-4">
+        <div class="nav-wrapper container">
+          <a href="/" class="brand-logo right">GAMIFY</a>
+          <ul id="nav-mobile" class="hide-on-med-and-down">
+            <!-- {{#if isAuthenticated}} -->
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="Register.html">Logout</a></li>
+            <!-- {{/if}} -->
+          </ul>
+        </div>
+    </nav>
+
+    <div id="login" class="row container">
+        <form class="col s8 offset-s2 card" action="/login" method="POST">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12">
+                <p class="card-title center-align">Login</p>
+              </div>
+            </div>
+            {{> messages}}
+            <div class="row">
+              <div class="col s12 input-field">
+                <input placeholder="email address" type="email" id="email" name="email" />
+                <label for="email">Email Address</label>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col s12">
+                <label for="password">Password</label>
+                <input placeholder="password" type="password" id="password" name="password" />
+      
+              </div>
+            </div>
+      
+            <div class="row center-align">
+              <div class="col s12">
+                <button class="waves-effect waves-light btn cyan accent-4">Login</button>
+              </div>
+            </div>
+      
+            <div class="row center-align">
+              <div class="col s12">
+                <p>Don't have an account? <a href="Register.html">Sign up now</a>!</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+    </body>
+    </html>
